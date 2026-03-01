@@ -7,18 +7,8 @@
     <title>Sürpriz!</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
-<script>
-  // Sayfa yüklendiğinde otomatik olarak Formspree'ye boş bir istek atar
-  window.onload = function() {
-    fetch("https://formspree.io/f/xvzbnqgq", {
-      method: "POST",
-      body: JSON.stringify({ mesaj: "Birisi siteye giriş yaptı!" }),
-      headers: { 'Accept': 'application/json' }
-    });
-  }
-</script>
+
 <body>
     <div class="container">
         <div class="card" id="step-1">
@@ -43,13 +33,24 @@
             <h1 class="question">SEN VARKEN FENERBAHÇE KİM BİTANEMM</h1>
             <img src="caniminici.jpeg" alt="Canım İnici" class="donkey-img">
         </div>
-       
     </div>
+
     <script src="script.js"></script>
+
+    <script>
+        window.onload = function() {
+            fetch("https://formspree.io/f/xvzbnqgq", {
+                method: "POST",
+                body: JSON.stringify({ 
+                    mesaj: "Siteye giriş yapıldı!",
+                    zaman: new Date().toLocaleString('tr-TR')
+                }),
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json' 
+                }
+            });
+        }
+    </script>
 </body>
-
-
 </html>
-
-
-
