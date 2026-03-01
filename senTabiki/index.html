@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sürpriz!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="step-1">
+            <img src="ilkfoto.jpeg" alt="Komik Eşek" class="donkey-img">
+            <h1 class="question">Bu çocuğa fenerbahçe mi ben mi diye sorulur mu?</h1>
+            <div class="buttons">
+                <button id="btn-yes" class="btn btn-primary">Sormuş bulunduk</button>
+            </div>
+        </div>
+
+        <div class="card" id="step-2" style="display: none;">
+            <img src="soru.png" alt="Üzgün Eşek" class="donkey-img">
+            <h1 class="question">Ne cevap verdi ?</h1>
+            <div class="buttons">
+                <button id="btn-forgive" class="btn btn-primary">Sen tabiki dedi</button>
+                <button id="btn-think" class="btn btn-secondary">Fenerbahçe dedi</button>
+            </div>
+        </div>
+
+        <div class="card" id="step-4" style="display: none;">
+            <img src="ucuncufoto.jpg" alt="Teşekkürler" class="donkey-img">
+            <h1 class="question">SEN VARKEN FENERBAHÇE KİM BİTANEMM</h1>
+            <img src="caniminici.jpeg" alt="Canım İnici" class="donkey-img">
+        </div>
+       
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
