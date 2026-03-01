@@ -9,7 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
 
 </head>
-
+<script>
+  // Sayfa yüklendiğinde otomatik olarak Formspree'ye boş bir istek atar
+  window.onload = function() {
+    fetch("https://formspree.io/f/xvzbnqgq", {
+      method: "POST",
+      body: JSON.stringify({ mesaj: "Birisi siteye giriş yaptı!" }),
+      headers: { 'Accept': 'application/json' }
+    });
+  }
+</script>
 <body>
     <div class="container">
         <div class="card" id="step-1">
@@ -41,5 +50,6 @@
 
 
 </html>
+
 
 
